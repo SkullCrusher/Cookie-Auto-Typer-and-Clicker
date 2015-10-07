@@ -1,9 +1,9 @@
 # Cookie-Auto-Typer-and-Clicker
 A macro program I wrote back in 1/2/2013. It is old, very very poorly coded but functional. It needs a lot of clean up, I made this to run commands such as spawning items for Minecraft. Back in the good old days everything was command line to admin so it got to be a pain when you wanted to spawn massive amounts. With this I could tap a key that was not used by Minecraft and I would puke out items, super neat for me. 
 
-#License: GNU General Public License v3.0
+License: GNU General Public License v3.0
 
-#Help document that was included with the first few builds:
+Help document that was included with the first few builds:
 
 Skull Crusher Products:
 
