@@ -5,9 +5,8 @@ A macro program I wrote back in 1/2/2013. It is old, very very poorly coded but 
 
 License: GNU General Public License v3.0
 
+Help document that was included with the first few builds.
 
-
-Help document that was included with the first few builds:
 Skull Crusher Products:
 
 Important: Visual C++ Redistributable for Visual Studio 2012 must be installed to run this software. If you do not have this installed or do not believe it was installed correctly please (re)install it.
