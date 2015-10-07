@@ -79,21 +79,12 @@ int main(array<System::String ^> ^args)
 }
 
 
-DWORD WINAPI MainThread(LPVOID)
-{
-	//ForceWindow[0] = true;//debugging
-	//ForceWindowName[0] = "Untitled - Notepad";//debugging
+DWORD WINAPI MainThread(LPVOID){
 		
-	while(KillThread == false)
-	{	
+	while(KillThread == false){	
 		/*
 			The Getkey chunk.
-		*/ 
-		/*for(;;)
-		//{
-		//	int which = SetKey();
-		//	Sleep(10);
-		}*/
+		*/ 	
 
 		//Make sure we skip spamming while selecting a new key.
 		if(SelectingNewKey){
@@ -104,7 +95,8 @@ DWORD WINAPI MainThread(LPVOID)
 
 		//Check if form is selected, if so do not allow spam.
 		if(MyProgramWindow != NULL){
-			HWND Temp =  GetForegroundWindow();//GetActiveWindow();//GetFocus();
+
+			HWND Temp =  GetForegroundWindow();
 			if(MyProgramWindow == Temp){
 				ActiveWindow = true;
 			}else{
@@ -115,14 +107,13 @@ DWORD WINAPI MainThread(LPVOID)
 		}
 
 		if(ActiveWindow == false){
-			//bool ForceWindow[9] = {false};
-			//std::string ForceWindowName[9] = {"!"};
 
 			if(GetAsyncKeyState(KeyForText1)) // 1
 			{
 				if(ForceWindow[0] == false){
 					bool Worked = SpamText(1, TextToSpam[0]);
 				}else{
+
 					//If we need to check the current window
 					if(ForceWindowName[0] != "!"){
 						HWND CurrentTopWindow =  GetForegroundWindow();
@@ -310,38 +301,9 @@ DWORD WINAPI MainThread(LPVOID)
 					}
 				}
 			}
-
-
-			/*
-		// Left Key                
-		if(GetAsyncKeyState(MouseKeyCodeLeft))
-		{
-			mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-			Sleep(1);
-			mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 		}
 
-		// Middle Key                
-		if(GetAsyncKeyState(MouseKeyCodeMiddle)) // 
-		{
-			mouse_event(MOUSEEVENTF_MIDDLEDOWN, 0, 0, 0, 0);
-			Sleep(1);
-			mouse_event(MOUSEEVENTF_MIDDLEUP, 0, 0, 0, 0);
-		}
-
-		// Right Key                
-		if(GetAsyncKeyState(MouseKeyCodeRight)) // 
-		{
-			mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0);
-			Sleep(1);
-			mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
-		}
-		*/
-
-
-		}
-
-	Sleep(10);
+		Sleep(10); //Force delay.
 	}
 
 	return 0;

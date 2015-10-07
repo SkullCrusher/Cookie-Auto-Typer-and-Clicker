@@ -84,9 +84,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Cookie MineCraft - Gui.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -101,18 +98,18 @@
     <ClInclude Include="Gui.h" />
     <ClInclude Include="KeyData.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Saving.h" />
     <ClInclude Include="Spam function.h" />
     <ClInclude Include="stdafx.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resX">
       <DependentUpon>Form1.h</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Art\app - Copy.ico" />
+    <Image Include="..\Art\Logo.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

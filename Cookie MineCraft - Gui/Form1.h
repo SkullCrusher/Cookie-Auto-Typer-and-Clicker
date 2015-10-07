@@ -176,6 +176,7 @@ private: System::ComponentModel::IContainer^  components;
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
@@ -1244,7 +1245,7 @@ private: System::ComponentModel::IContainer^  components;
 			// statusStrip1
 			// 
 			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->toolStripStatusLabel1 });
-			this->statusStrip1->Location = System::Drawing::Point(0, 333);
+			this->statusStrip1->Location = System::Drawing::Point(0, 355);
 			this->statusStrip1->Name = L"statusStrip1";
 			this->statusStrip1->Size = System::Drawing::Size(315, 22);
 			this->statusStrip1->TabIndex = 10;
@@ -1260,13 +1261,14 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(315, 355);
+			this->ClientSize = System::Drawing::Size(315, 377);
 			this->Controls->Add(this->statusStrip1);
 			this->Controls->Add(this->tabControl1);
 			this->Controls->Add(this->label3);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"Form1";
 			this->Opacity = 0.95;
 			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Hide;

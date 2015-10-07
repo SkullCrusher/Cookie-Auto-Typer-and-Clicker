@@ -1,6 +1,3 @@
-/*
-	
-*/
 #pragma once
 #include "stdafx.h"
 
@@ -16,8 +13,6 @@ bool SpamText(int Which, string ToSpam) // Which is for the time - i.e. Which te
 	{
 		//Added 12/22/2012
 		//Atempting to do beable to use {ENTER}, {WAIT:TIME}, {LEFTCLICK}, {RIGHTCLICK}, {MIDDLECLICK}
-		//
-		//
 		if(ToSpam[Current] == '{'){
 
 			int OtherBracket = Current;
@@ -105,7 +100,6 @@ bool SpamText(int Which, string ToSpam) // Which is for the time - i.e. Which te
 
 
 // Last tested 10/1/2011 - Working.
-//
 // bool Unused = press_key('f');
 bool press_key(char use, int delay)
 {
@@ -559,13 +553,12 @@ bool press_key(char use, int delay)
 						break;
 
 						default:
-							//UINT Temptemp = MapVirtualKey('?', MAPVK_VSC_TO_VK);
-							
+						
+							//I have no idea why this is here, sorry.
+
 							INPUT ip;
 
-							// Pause for 5 seconds.
-							//Sleep(5000);
-
+		
 							// Set up a generic keyboard event.
 							ip.type = INPUT_KEYBOARD;
 							ip.ki.wScan = use; // hardware scan code for key
@@ -581,13 +574,6 @@ bool press_key(char use, int delay)
 							ip.ki.dwFlags = KEYEVENTF_KEYUP; // KEYEVENTF_KEYUP for key release
 							SendInput(1, &ip, sizeof(INPUT));
 
-
-
-							//keybd_event(VK_RSHIFT, NULL, NULL, NULL);
-						//1	SHORT result = VkKeyScanEx( use, LoadKeyboardLayout( TEXT("00000409"), KLF_ACTIVATE ) );
-							//keybd_event(retval, NULL, NULL, NULL);  
-						//	keybd_event(retval, NULL, KEYEVENTF_KEYUP, NULL); 
-							//keybd_event(VK_RSHIFT, NULL, KEYEVENTF_KEYUP, NULL);
 							Sleep(speed);   
 
 

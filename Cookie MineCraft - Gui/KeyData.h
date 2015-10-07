@@ -1,20 +1,18 @@
 /*
-	KeyData.h
-
+	KeyData.h - future self looking back on this I believe this tracks the trigger keys to see if they are pressed.		
 
 */
 #pragma once
 #include "stdafx.h" 
 #include "Form1.h"
 
-
 using namespace CookieMineCraftGui;
 
 
 //Added 12/24/2012
-int MouseClickDelayLEFT = 10;   //[9];
-int MouseClickDelayMIDDLE = 10; //[9];
-int MouseClickDelayRIGHT = 10;  //[9];
+int MouseClickDelayLEFT = 10;  
+int MouseClickDelayMIDDLE = 10;
+int MouseClickDelayRIGHT = 10;  
 //TEXTBOX28 - LEFT  ||
 //TEXTBOX29 - MIDDLE||
 //TEXTBOX30 - RIGHT ||
@@ -75,16 +73,8 @@ DWORD WINAPI ThreadKeyData(LPVOID)
 	{
 		SwitchSelectingNewKey(true);
 		int NewKey = SetKey(); // NOTE SETKEY DOES NOT SUPPORT a-Z + 0-9. Please change. (Update i think i fixed that.)
-		if(NewKey != 0x00)
-		{
-			
-			//If Any of the already set keys is the the same then
-
-			//Note I just skipped this.. I just don't think it matters?
-			//if(KeyForText1 == NewKey){
-			//}
-
-
+		if(NewKey != 0x00){
+					
 			//Sadly i have to hard code each in.
 			if(ThreadWhichToChange == "L1"){
 				KeyForText1 = NewKey;
@@ -193,7 +183,6 @@ string FindNameForKey(int KeyCode)
 
 	return Name;
 }
-
 
 //Note this just checks to see if it can start the thread so we don't have more then one up.
 bool Start_SetKey(string WhichToChange, int SwitchLable)
@@ -596,112 +585,6 @@ int LoadKeys()
 
 	KeyName.push_back("z");
 	KeyHexValue.push_back(0x5A);
-
-
-
-
-/*
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-*/
-
-
 
 
 
