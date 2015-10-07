@@ -1,5 +1,5 @@
-﻿Build started 10/6/2015 9:58:22 PM.
-     1>Project "C:\DwarvenKnowledgeLLC\Cookie-Auto-Typer-and-Clicker\Cookie MineCraft - Gui\Cookie MineCraft - Gui.vcxproj" on node 2 (Build target(s)).
+﻿Build started 10/6/2015 10:15:27 PM.
+     1>Project "C:\DwarvenKnowledgeLLC\Cookie-Auto-Typer-and-Clicker\Cookie MineCraft - Gui\Cookie MineCraft - Gui.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Cookie MineCraft - Gui.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
          stdafx.cpp
@@ -21,8 +21,8 @@
          Debug\stdafx.obj
          "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
          Cookie MineCraft - Gui.vcxproj -> C:\DwarvenKnowledgeLLC\Cookie-Auto-Typer-and-Clicker\Debug\Cookie MineCraft - Gui.exe
-     1>Done Building Project "C:\DwarvenKnowledgeLLC\Cookie-Auto-Typer-and-Clicker\Cookie MineCraft - Gui\Cookie MineCraft - Gui.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\DwarvenKnowledgeLLC\Cookie-Auto-Typer-and-Clicker\Cookie MineCraft - Gui\Cookie MineCraft - Gui.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.99
+Time Elapsed 00:00:03.92
