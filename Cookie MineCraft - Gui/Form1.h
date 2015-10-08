@@ -145,6 +145,7 @@ private: System::Windows::Forms::TextBox^  textBox31;
 private: System::Windows::Forms::Timer^  timer1;
 private: System::Windows::Forms::StatusStrip^  statusStrip1;
 private: System::Windows::Forms::ToolStripStatusLabel^  toolStripStatusLabel1;
+private: System::Windows::Forms::LinkLabel^  linkLabel1;
 
 
 
@@ -269,6 +270,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->statusStrip1 = (gcnew System::Windows::Forms::StatusStrip());
 			this->toolStripStatusLabel1 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
+			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabPage2->SuspendLayout();
@@ -1256,11 +1258,23 @@ private: System::ComponentModel::IContainer^  components;
 			this->toolStripStatusLabel1->Name = L"toolStripStatusLabel1";
 			this->toolStripStatusLabel1->Size = System::Drawing::Size(0, 17);
 			// 
+			// linkLabel1
+			// 
+			this->linkLabel1->AutoSize = true;
+			this->linkLabel1->Location = System::Drawing::Point(271, 9);
+			this->linkLabel1->Name = L"linkLabel1";
+			this->linkLabel1->Size = System::Drawing::Size(40, 13);
+			this->linkLabel1->TabIndex = 40;
+			this->linkLabel1->TabStop = true;
+			this->linkLabel1->Text = L"GitHub";
+			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &Form1::linkLabel1_LinkClicked);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(315, 377);
+			this->Controls->Add(this->linkLabel1);
 			this->Controls->Add(this->statusStrip1);
 			this->Controls->Add(this->tabControl1);
 			this->Controls->Add(this->label3);
@@ -2390,6 +2404,10 @@ private: System::Void textBox30_KeyPress(System::Object^  sender, System::Window
 				 e->Handled = true;
 			 }
 		 }
+
+private: System::Void linkLabel1_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) {
+	System::Diagnostics::Process::Start("https://github.com/SkullCrusher/Cookie-Auto-Typer-and-Clicker/");
+}
 };
 }
 
