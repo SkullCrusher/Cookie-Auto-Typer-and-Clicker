@@ -285,9 +285,9 @@ private: System::ComponentModel::IContainer^  components;
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(46, 9);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(211, 37);
+			this->label3->Size = System::Drawing::Size(213, 37);
 			this->label3->TabIndex = 7;
-			this->label3->Text = L"Cookie 6.10.1";
+			this->label3->Text = L"Cookie 6.10.2";
 			// 
 			// tabControl1
 			// 
