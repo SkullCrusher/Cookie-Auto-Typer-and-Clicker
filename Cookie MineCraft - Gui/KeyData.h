@@ -67,10 +67,10 @@ bool ThreadInUse = false;
 string ThreadWhichToChange;
 
 //This waits for the next key to be pressed - NOTE there is no time out.
-DWORD WINAPI ThreadKeyData(LPVOID)
-{
-	for(;;)
-	{
+DWORD WINAPI ThreadKeyData(LPVOID){
+
+	for(;;){
+
 		SwitchSelectingNewKey(true);
 		int NewKey = SetKey(); // NOTE SETKEY DOES NOT SUPPORT a-Z + 0-9. Please change. (Update i think i fixed that.)
 		if(NewKey != 0x00){
@@ -135,8 +135,6 @@ DWORD WINAPI ThreadKeyData(LPVOID)
 
 				/*Added 1/1/2013 - HAPPY NEW YEAR :D
 				** Ok so basicly the key was getting stuck down.. or? something so we make sure it unsticks by pressing up for the user.
-				**
-				**
 				*/
 				INPUT ip;
 
@@ -144,16 +142,11 @@ DWORD WINAPI ThreadKeyData(LPVOID)
 				ip.ki.wScan = NewKey; // hardware scan code for key
 				ip.ki.time = 0;
 				ip.ki.dwExtraInfo = 0;
-
 				
 				ip.ki.wVk = 0;
-				//ip.ki.dwFlags = KEYEVENTF_UNICODE; 
-				//SendInput(1, &ip, sizeof(INPUT));
 								
 				ip.ki.dwFlags = KEYEVENTF_KEYUP; // KEYEVENTF_KEYUP for key release
 				SendInput(1, &ip, sizeof(INPUT));
-
-
 
 				return 1;
 			

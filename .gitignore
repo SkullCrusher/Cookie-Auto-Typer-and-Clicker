@@ -1,0 +1,14 @@
+*.sdf
+Cookie MineCraft - Gui.sdf
+*.suo
+*.tlog
+Cookie MineCraft - Gui/Debug/Cookie MineCraft - Gui.log
+*.pch
+*.pdb
+Debug/Cookie MineCraft - Gui.exe
+*.metagen
+Cookie MineCraft - Gui/Debug/Cookie MineCraft - Gui.vcxprojResolveAssemblyReference.cache
+*.Cache
+Cookie MineCraft - Gui/Debug/Cookie MineCraft - Gui.obj
+*.obj
+Cookie MineCraft - Gui.v12.suo
