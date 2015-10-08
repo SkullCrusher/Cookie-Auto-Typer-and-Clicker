@@ -12,3 +12,6 @@ Cookie MineCraft - Gui/Debug/Cookie MineCraft - Gui.vcxprojResolveAssemblyRefere
 Cookie MineCraft - Gui/Debug/Cookie MineCraft - Gui.obj
 *.obj
 Cookie MineCraft - Gui.v12.suo
+*.sdf
+*.suo
+Cookie MineCraft - Gui/Debug/Cookie MineCraft - Gui.Build.CppClean.log
