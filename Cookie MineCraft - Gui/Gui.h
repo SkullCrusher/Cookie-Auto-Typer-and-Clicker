@@ -46,7 +46,7 @@ bool LoadTimeStringForKey(string Load, int slot)
 	TempTimeAsString2[slot] = Load;
 
 	std::string myString = Load;
-	TextDelayValueForKey[slot] = atoi(myString.c_str()); //value = 45
+	TextDelayValueForKey[slot] = atoi(myString.c_str());
 
 	return true;
 }
@@ -58,7 +58,7 @@ bool LoadTimeString(string Load, int slot)
 	TempTimeAsString[slot] = Load;
 
 	std::string myString = Load;
-	TextDelayValue[slot] = atoi(myString.c_str()); //value = 45
+	TextDelayValue[slot] = atoi(myString.c_str()); 
 
 	return true;
 }

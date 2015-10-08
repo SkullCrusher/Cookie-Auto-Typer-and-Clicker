@@ -1,20 +1,18 @@
 /*
-	KeyData.h
-
+	KeyData.h - future self looking back on this I believe this tracks the trigger keys to see if they are pressed.		
 
 */
 #pragma once
 #include "stdafx.h" 
 #include "Form1.h"
 
-
 using namespace CookieMineCraftGui;
 
 
 //Added 12/24/2012
-int MouseClickDelayLEFT = 10;   //[9];
-int MouseClickDelayMIDDLE = 10; //[9];
-int MouseClickDelayRIGHT = 10;  //[9];
+int MouseClickDelayLEFT = 10;  
+int MouseClickDelayMIDDLE = 10;
+int MouseClickDelayRIGHT = 10;  
 //TEXTBOX28 - LEFT  ||
 //TEXTBOX29 - MIDDLE||
 //TEXTBOX30 - RIGHT ||
@@ -69,22 +67,14 @@ bool ThreadInUse = false;
 string ThreadWhichToChange;
 
 //This waits for the next key to be pressed - NOTE there is no time out.
-DWORD WINAPI ThreadKeyData(LPVOID)
-{
-	for(;;)
-	{
+DWORD WINAPI ThreadKeyData(LPVOID){
+
+	for(;;){
+
 		SwitchSelectingNewKey(true);
 		int NewKey = SetKey(); // NOTE SETKEY DOES NOT SUPPORT a-Z + 0-9. Please change. (Update i think i fixed that.)
-		if(NewKey != 0x00)
-		{
-			
-			//If Any of the already set keys is the the same then
-
-			//Note I just skipped this.. I just don't think it matters?
-			//if(KeyForText1 == NewKey){
-			//}
-
-
+		if(NewKey != 0x00){
+					
 			//Sadly i have to hard code each in.
 			if(ThreadWhichToChange == "L1"){
 				KeyForText1 = NewKey;
@@ -145,8 +135,6 @@ DWORD WINAPI ThreadKeyData(LPVOID)
 
 				/*Added 1/1/2013 - HAPPY NEW YEAR :D
 				** Ok so basicly the key was getting stuck down.. or? something so we make sure it unsticks by pressing up for the user.
-				**
-				**
 				*/
 				INPUT ip;
 
@@ -154,16 +142,11 @@ DWORD WINAPI ThreadKeyData(LPVOID)
 				ip.ki.wScan = NewKey; // hardware scan code for key
 				ip.ki.time = 0;
 				ip.ki.dwExtraInfo = 0;
-
 				
 				ip.ki.wVk = 0;
-				//ip.ki.dwFlags = KEYEVENTF_UNICODE; 
-				//SendInput(1, &ip, sizeof(INPUT));
 								
 				ip.ki.dwFlags = KEYEVENTF_KEYUP; // KEYEVENTF_KEYUP for key release
 				SendInput(1, &ip, sizeof(INPUT));
-
-
 
 				return 1;
 			
@@ -193,7 +176,6 @@ string FindNameForKey(int KeyCode)
 
 	return Name;
 }
-
 
 //Note this just checks to see if it can start the thread so we don't have more then one up.
 bool Start_SetKey(string WhichToChange, int SwitchLable)
@@ -596,112 +578,6 @@ int LoadKeys()
 
 	KeyName.push_back("z");
 	KeyHexValue.push_back(0x5A);
-
-
-
-
-/*
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-
-	KeyName.push_back("");
-	KeyHexValue.push_back(0x);
-*/
-
-
 
 
 
