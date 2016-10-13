@@ -54,7 +54,7 @@ bool Load_ForceWindow(std::string WindowName, int Switch, bool Enabled){
 }
 
 [STAThreadAttribute]
-int main(array<System::String ^> ^args)
+int main()
 {
 
 	// Check if program is already running.
