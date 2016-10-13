@@ -7,28 +7,30 @@ License: GNU General Public License v3.0
 
 Help document that was included with the first few builds.
 
-Skull Crusher Products:
-
 Important: Visual C++ Redistributable for Visual Studio 2012 must be installed to run this software. If you do not have this installed or do not believe it was installed correctly please (re)install it.
 
 http://www.microsoft.com/en-us/download/details.aspx?id=30679#overview
 
-Special Characters usage:
-	Almost any character can be entered into the data message but some have no valid character form (i.e enter)
+# Screen shot
+![Screen Shot](/Art/lgo%20for%20bandit.png "Screen shot")
+
+# Special Characters usage:
+Almost any character can be entered into the data message but some have no valid character form (i.e enter)
 	
-	To use:
-	1. Open Data tab.
-	2. type the Special character you want (Example will be {ENTER})
-	Example Message: "Fun {ENTER}is how sun is {ENTER}{WAIT:201}run.{LEFT}{ENTER}"
+To use:
+1. Open Data tab.
+2. type the Special character you want (Example will be {ENTER})
+Example Message: "Fun {ENTER}is how sun is {ENTER}{WAIT:201}run.{LEFT}{ENTER}"
 
-To bind keys:
+# To bind keys:
+1. Open Data tab.
+2. Click on the name of the currently selected bound key (i.e Numpad 1).
+3. Press any key to bind a new key.
 
-	1. Open Data tab.
-	2. Click on the name of the currently selected bound key (i.e Numpad 1).
-	3. Press any key to bind a new key.
-
-To bind Window:
-	1. Open Window tab.
-	2. Enter the window title (i.e "Cookie" for Cookie Auto Typer)
-	3. Click Enable. If window is not valid it will automatically disable the window bind. 
+# To bind Window:
+1. Open Window tab.
+2. Enter the window title (i.e "Cookie" for Cookie Auto Typer)
+3. Click Enable. If window is not valid it will automatically disable the window bind. 
 	
+# Binaries
+1. Check the releases for which version you want.
